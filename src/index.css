@@ -1,0 +1,40 @@
+/* src/index.css - global reset and layout helpers */
+/* Put this at top of file (or replace your existing reset) */
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Basic body styles */
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #222;
+  background: #ffffff;
+  line-height: 1.45;
+}
+
+/* Utility: main content wrapper that respects the fixed navbar */
+.app-main {
+  /* IMPORTANT: top padding must match the navbar height */
+  padding-top: 70px; /* <-- match Navbar height */
+  min-height: calc(100vh - 70px);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Make sure full-page sections can use 100vh safely */
+.section-full {
+  min-height: calc(100vh - 70px);
+  padding: 2rem 1rem;
+}

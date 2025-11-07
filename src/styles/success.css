@@ -1,0 +1,70 @@
+.success-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background-color: #f0fdf4;
+  padding: 1rem;
+}
+
+.success-card {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.success-card h2 {
+  color: #146b2e;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.success-card p {
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.summary {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.summary h4 {
+  margin-bottom: 0.5rem;
+}
+
+.btn-continue {
+  background: #146b2e;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.btn-continue:hover {
+  background: #0f5725;
+}
+
+@media (max-width: 600px) {
+  .success-card {
+    padding: 1.5rem;
+  }
+
+  .icon {
+    font-size: 2.5rem;
+  }
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Plantain Chips",
+    "price": 4.99,
+    "image": "/assets/products/plantain-chips.jpg",
+    "category": "Snacks",
+    "description": "Crispy and lightly salted plantain chips, made from ripe plantains."
+  },
+  {
+    "id": 2,
+    "name": "Jollof Spice Mix",
+    "price": 6.49,
+    "image": "/assets/products/jollof-spice.jpg",
+    "category": "Spices",
+    "description": "Authentic West African seasoning for rich, flavorful jollof rice."
+  },
+  {
+    "id": 3,
+    "name": "Zobo Drink",
+    "price": 3.99,
+    "image": "/assets/products/zobo.jpg",
+    "category": "Drinks",
+    "description": "Refreshing hibiscus beverage brewed with natural ingredients."
+  },
+  {
+    "id": 4,
+    "name": "Shea Butter",
+    "price": 8.99,
+    "image": "/assets/products/shea-butter.jpg",
+    "category": "Beauty",
+    "description": "Pure, organic shea butter for smooth, hydrated skin."
+  }
+]
