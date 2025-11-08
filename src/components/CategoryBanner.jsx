@@ -1,46 +1,37 @@
+// src/components/CategoryGrid.jsx
 import React from "react";
-import "./CategoryBanner.css";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import "../styles/CategoryBanner.css";
 
-const categories = [
-  {
-    name: "Snacks",
-    image: "/assets/category/snacks.jpg",
-  },
-  {
-    name: "Spices",
-    image: "/assets/category/spices.jpg",
-  },
-  {
-    name: "Drinks",
-    image: "/assets/category/drinks.jpg",
-  },
-  {
-    name: "Beauty",
-    image: "/assets/category/beauty.jpg",
-  },
-];
+export default function Category() {
+  const navigate = useNavigate();
 
-const CategoryBanner = () => {
+  const categories = [
+    { name: "Grains & Flours", image: "https://images.unsplash.com/photo-1604335399105-5c0f8a6baf45" },
+    { name: "Spices & Seasonings", image: "https://images.unsplash.com/photo-1588167056544-2a2f2ee6b72a" },
+    { name: "Snacks & Drinks", image: "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f" },
+    { name: "Frozen Foods", image: "https://images.unsplash.com/photo-1589984662646-512a89b94bd6" },
+  ];
+
+  const handleCategoryClick = (catName) => {
+    navigate("/shop", { state: { category: catName } });
+  };
+
   return (
-    <section className="category-banner">
+    <section className="categories">
       <h2>Shop by Category</h2>
       <div className="category-grid">
-        {categories.map((cat) => (
-          <Link
-            to={`/shop?category=${cat.name}`}
-            key={cat.name}
+        {categories.map((cat, index) => (
+          <div
+            key={index}
             className="category-card"
-            style={{ backgroundImage: `url(${cat.image})` }}
+            onClick={() => handleCategoryClick(cat.name)}
           >
-            <div className="overlay">
-              <h3>{cat.name}</h3>
-            </div>
-          </Link>
+            <img src={cat.image} alt={cat.name} />
+            <div className="category-name">{cat.name}</div>
+          </div>
         ))}
       </div>
     </section>
   );
-};
-
-export default CategoryBanner;
+}
