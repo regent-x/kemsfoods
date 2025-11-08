@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./AboutPreview.css";
+import "./aboutpreview.css";
 
 const AboutPreview = () => {
   return (
