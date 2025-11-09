@@ -1,6 +1,6 @@
 import React from "react";
 import { useCart } from "../context/CartContext"; // ✅ make sure useCart is defined
-import "../styles/Checkout.css";
+import "./Checkout.css";
 
 const Checkout = () => {
   const { cartItems, totalPrice } = useCart();

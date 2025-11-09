@@ -1,14 +1,14 @@
 // src/components/CategoryGrid.jsx
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/CategoryBanner.css";
+import "./CategoryBanner.css";
 
 export default function Category() {
   const navigate = useNavigate();
 
   const categories = [
-    { name: "Grains & Flours", image: "https://images.unsplash.com/photo-1604335399105-5c0f8a6baf45" },
-    { name: "Spices & Seasonings", image: "https://images.unsplash.com/photo-1588167056544-2a2f2ee6b72a" },
+    { name: "Grains & Flours", image: "../assets/veggies.webp"},
+    { name: "Spices & Seasonings", image: "../assets/photo-14.webp"},
     { name: "Snacks & Drinks", image: "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f" },
     { name: "Frozen Foods", image: "https://images.unsplash.com/photo-1589984662646-512a89b94bd6" },
   ];

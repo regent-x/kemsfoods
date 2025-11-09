@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useCart } from "../context/CartContext";
-import "../styles/ProductDetail.css";
+import "./ProductDetail.css";
 
 // 🎨 Design mindset: 
 // clean, centered layout, large image, subtle background.

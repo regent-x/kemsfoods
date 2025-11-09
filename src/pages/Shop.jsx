@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import products from "../data/products";
-import "../styles/Shop.css";
+import "./Shop.css";
 
 // 🎨 Design mindset: clean layout, top controls, responsive grid
 // 🧠 UX: make it easy to find & explore products

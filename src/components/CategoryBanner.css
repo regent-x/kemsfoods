@@ -1,0 +1,47 @@
+.categories {
+  padding: 4rem 2rem;
+  background-color: #fafaf9;
+  text-align: center;
+}
+
+
+.category-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  justify-items: center;
+}
+/* 💻 Tablet+ */
+@media (min-width: 600px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 🖥 Desktop */
+@media (min-width: 1024px) {
+  .category-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.category-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.category-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
