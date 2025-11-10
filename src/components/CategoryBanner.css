@@ -1,47 +1,177 @@
+/* ==========================================================
+   CATEGORY GRID — KEMS AFRICAN FOODS & MORE
+   Deep Green Base | Warm Orange Highlights | Soft Shadow Layers
+   ========================================================== */
+
 .categories {
-  padding: 4rem 2rem;
-  background-color: #fafaf9;
+  padding: 4rem 1.5rem;
+  background: #fdfaf5;
   text-align: center;
+  color: #222;
+  font-family: "Poppins", sans-serif;
 }
 
+.categories h2 {
+  position: relative;
+  font-size: 2rem;
+  color: #0b3d2e;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 0.3rem;
+  display: inline-block;
+}
 
+.categories h2::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #f39c12, #e67e22);
+  border-radius: 2px;
+}
+
+.categories p {
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+/* =============================================
+   GRID LAYOUT
+   ============================================= */
 .category-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  justify-items: center;
-}
-/* 💻 Tablet+ */
-@media (min-width: 600px) {
-  .category-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.8rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* 🖥 Desktop */
-@media (min-width: 1024px) {
-  .category-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
+/* =============================================
+   CATEGORY CARD
+   ============================================= */
 .category-card {
-  background: #fff;
-  border-radius: 10px;
+  position: relative;
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  display: flex;
-  flex-direction: column;
+  border-radius: 1rem;
+  background: #eee;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.category-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+.category-card.loading {
+  background: linear-gradient(100deg, #e9e9e9 30%, #f5f5f5 50%, #e9e9e9 70%);
+  background-size: 400% 100%;
+  animation: shimmer 1.2s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
 }
 
 .category-card img {
   width: 100%;
-  height: 220px;
+  height: 200px;
   object-fit: cover;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.category-card:hover img {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(11, 61, 46, 0.25);
+}
+
+/* =============================================
+   ICON OVERLAY
+   ============================================= */
+.category-icon {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 1.8rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* =============================================
+   BADGE
+   ============================================= */
+.category-badge {
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.5px;
+}
+
+/* =============================================
+   CATEGORY NAME
+   ============================================= */
+.category-name {
+  background: #0b3d2e;
+  color: #fff;
+  text-align: center;
+  padding: 0.8rem 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: capitalize;
+  border-top: 3px solid #f39c12;
+  transition: background 0.3s ease;
+}
+
+.category-card:hover .category-name {
+  background: linear-gradient(135deg, #145a32, #1c7c54);
+  border-top-color: #e67e22;
+}
+
+.category-count {
+  display: block;
+  font-size: 0.8rem;
+  opacity: 0.85;
+  color: #f5d7a4;
+  font-weight: 400;
+}
+
+/* =============================================
+   RESPONSIVE DESIGN
+   ============================================= */
+@media (max-width: 768px) {
+  .categories {
+    padding: 3rem 1rem;
+  }
+
+  .category-card img {
+    height: 170px;
+  }
+}
+
+@media (max-width: 480px) {
+  .categories h2 {
+    font-size: 1.6rem;
+  }
+
+  .category-card img {
+    height: 150px;
+  }
+
+  .category-name {
+    font-size: 0.9rem;
+  }
 }

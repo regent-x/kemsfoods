@@ -1,214 +1,257 @@
-/* Navbar base */
-:root {
-  --accent: #d97706;
-  --bg: #ffffff;
-  --muted: #666;
-}
-
-* { box-sizing: border-box; }
+/* ============================================
+   NAVBAR — KEMS AFRICAN FOODS SIGNATURE STYLE
+   Deep Green + Vibrant Orange Accents
+   ============================================ */
 
 .navbar {
-  position: relative;
-  background: var(--bg);
-  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: linear-gradient(135deg, #0b3d2e 0%, #145a32 60%, #1c7c54 100%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
 }
 
 .nav-inner {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 0.8rem 1rem;
+  padding: 15px 25px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
 }
 
-/* Logo */
+/* ============================================
+   BRAND / LOGO
+   ============================================ */
 .nav-logo {
   text-decoration: none;
-  color: #222;
-  font-weight: 700;
-  font-size: 1.05rem;
-  display: inline-flex;
-  align-items: center;
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: #fff;
+  letter-spacing: 1px;
+  position: relative;
+  transition: color 0.3s ease;
 }
-.nav-logo span { pointer-events: none; }
 
-/* Desktop links */
-.nav-links {
-  display: none; /* mobile-first: hidden until wider screens */
-  gap: 1.25rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.nav-logo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #f39c12, #e67e22);
+  transition: width 0.4s ease;
 }
+
+.nav-logo:hover {
+  color: #f39c12;
+}
+
+.nav-logo:hover::after {
+  width: 100%;
+}
+
+/* ============================================
+   DESKTOP NAV LINKS
+   ============================================ */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+}
+
 .nav-links a {
   text-decoration: none;
-  color: #333;
+  color: #f1f1f1;
   font-weight: 500;
-  padding: 0.4rem 0.5rem;
-  border-radius: 6px;
+  position: relative;
+  transition: color 0.3s ease;
 }
-.nav-links a:hover { background: #f7f7f7; }
 
-/* Actions (cart + hamburger) */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #e67e22, #f39c12);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f39c12;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ============================================
+   ACTION BUTTONS: Search + Cart + Hamburger
+   ============================================ */
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 18px;
 }
 
-/* Cart icon + badge */
+.nav-actions a,
+.hamburger-btn {
+  color: #fff;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-actions a:hover,
+.hamburger-btn:hover {
+  color: #f39c12;
+  transform: scale(1.1);
+}
+
+/* ============================================
+   CART BADGE
+   ============================================ */
 .cart-link {
   position: relative;
-  display: inline-flex;
-  align-items: center;
-  color: #222;
-  text-decoration: none;
 }
+
 .cart-badge {
   position: absolute;
-  top: -6px;
-  right: -8px;
-  background: var(--accent);
-  color: white;
-  min-width: 18px;
-  height: 18px;
-  padding: 0 5px;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  top: -8px;
+  right: -10px;
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 0.7rem;
   font-weight: 700;
-  line-height: 1;
+  padding: 4px 7px;
+  box-shadow: 0 0 10px rgba(243, 156, 18, 0.6);
 }
 
-/* Hamburger button */
+/* ============================================
+   MOBILE MENU BUTTON
+   ============================================ */
 .hamburger-btn {
-  background: none;
-  border: none;
-  display: inline-flex;
-  align-items: center;
-  padding: 0.4rem;
-  cursor: pointer;
-}
-
-/* Backdrop (when mobile menu open) */
-.nav-backdrop {
   display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.35);
-  z-index: 900;
-  opacity: 0;
-  transition: opacity 0.25s ease;
-}
-.nav-backdrop.visible {
-  display: block;
-  opacity: 1;
+  z-index: 1001;
 }
 
-/* Mobile sliding menu - starts off screen to the right */
+/* ============================================
+   MOBILE MENU
+   ============================================ */
 .mobile-menu {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 78%;
-  max-width: 320px;
-  height: 100vh;
-  background: var(--bg);
-  box-shadow: -10px 0 30px rgba(0,0,0,0.08);
-  z-index: 1000;
+  width: 75%;
+  max-width: 360px;
+  height: 100%;
+  background: linear-gradient(135deg, #0b3d2e 0%, #1c7c54 100%);
+  box-shadow: -4px 0 25px rgba(0, 0, 0, 0.4);
+  padding: 80px 30px 40px;
   display: flex;
   flex-direction: column;
-  padding: 2.5rem 1.25rem;
-  gap: 1rem;
-  transition: right 0.32s cubic-bezier(.2,.9,.2,1);
+  align-items: flex-start;
+  gap: 25px;
+  transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 1000;
 }
 
-/* When active -> slide in */
 .mobile-menu.active {
   right: 0;
 }
 
-/* Mobile nav links inside sidebar */
+/* Close button inside mobile menu */
+.mobile-close-btn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.mobile-close-btn:hover {
+  transform: rotate(90deg);
+  color: #f39c12;
+}
+
+/* Mobile nav links */
 .mobile-nav {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  width: 100%;
+  gap: 18px;
 }
+
 .mobile-nav a {
-  color: #222;
   text-decoration: none;
+  color: #f1f1f1;
+  font-size: 1.1rem;
   font-weight: 600;
-  padding: 0.5rem 0;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Desktop breakpoint: show main nav, hide hamburger */
-@media (min-width: 900px) {
-  .nav-links { display: flex; }
-  .hamburger-btn { display: none; }
-  .mobile-menu { display: none; }
-  .nav-backdrop { display: none; }
-}
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: white;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  z-index: 1000;
-  height: 70px;
-  display: flex;
-  align-items: center;
+.mobile-nav a:hover {
+  color: #f39c12;
+  transform: translateX(5px);
 }
 
-.nav-inner {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1rem;
-}
-
+/* ============================================
+   BACKDROP (behind mobile menu)
+   ============================================ */
 .nav-backdrop {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0,0,0,0.5);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
   opacity: 0;
-  pointer-events: none;
+  visibility: hidden;
   transition: opacity 0.3s ease;
-  z-index: 900;
+  z-index: 999;
 }
 
 .nav-backdrop.visible {
   opacity: 1;
-  pointer-events: all;
+  visibility: visible;
 }
 
-/* Mobile menu (sidebar) */
-.mobile-menu {
-  position: fixed;
-  top: 0;
-  right: -80%;
-  width: 70%;
-  height: 100vh;
-  background: #fff;
-  box-shadow: -2px 0 5px rgba(0,0,0,0.1);
-  transition: right 0.3s ease;
-  z-index: 950;
-  display: flex;
-  flex-direction: column;
-  padding: 2rem 1rem;
+/* ============================================
+   RESPONSIVE BEHAVIOR
+   ============================================ */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-inner {
+    padding: 15px 20px;
+  }
 }
 
-.mobile-menu.active {
-  right: 0;
+@media (max-width: 480px) {
+  .nav-logo {
+    font-size: 1.1rem;
+  }
+
+  .cart-badge {
+    font-size: 0.6rem;
+    padding: 3px 6px;
+  }
 }

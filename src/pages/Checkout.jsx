@@ -1,6 +1,7 @@
 import React from "react";
 import { useCart } from "../context/CartContext"; // ✅ make sure useCart is defined
 import "./Checkout.css";
+import { Navigate } from "react-router-dom";
 
 const Checkout = () => {
   const { cartItems, totalPrice } = useCart();
@@ -27,7 +28,7 @@ const Checkout = () => {
           <label>Country</label>
           <input type="text" placeholder="Country" />
 
-          <button type="submit" className="checkout-btn">
+          <button type="submit" className="checkout-btn" onClick={()=>Navigate("/success")}>
             Place Order
           </button>
         </form>
