@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./AdminDashboard.css";
+import "./admindashboard.css";
 import { PlusCircle, Tag, Package, Percent } from "lucide-react";
 
 // 🎨 Admin Dashboard — clean, boxy, minimal UI
