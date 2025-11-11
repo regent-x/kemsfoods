@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ShoppingCart, Search } from "lucide-react";
 import { useCart } from "../context/CartContext";
-import "./navbar.css";
+import "./src/components/navbar.css";
 
 export default function Navbar() {
   // State to control mobile menu visibility
