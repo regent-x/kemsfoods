@@ -1,5 +1,5 @@
 import React from "react";
-import "./productcard.css";
+import "/productcard.css";
 
 const ProductCard = ({ product }) => {
   return (
