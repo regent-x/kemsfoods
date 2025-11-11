@@ -1,5 +1,5 @@
 import React from "react";
-import "./FeaturedProducts.css";
+import "./featuredproducts.css";
 import ProductCard from "./ProductCard";
 import products from "../products.json";
 

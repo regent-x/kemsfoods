@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
-import "./Success.css";
+import "./success.css";
 
 export default function Success() {
   const { cartItems, setCartItems } = useCart();

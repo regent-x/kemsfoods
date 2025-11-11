@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./About.css";
+import "./about.css";
 
 // 🎨 Story-driven layout
 // 🧠 Builds brand connection & trust

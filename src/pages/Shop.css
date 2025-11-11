@@ -1,111 +1,177 @@
+/* ==========================================================
+   SHOP PAGE — KEMS AFRICAN FOODS & MORE
+   Clean white layout | Orange energy | Green accents
+   ========================================================== */
+
+/* ---------- Base Container ---------- */
 .shop-container {
-  padding: 2rem;
-  background-color: #faf9f6;
+  background: #fff;
   min-height: 100vh;
-}
-
-.shop-title {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  padding: 3rem 1.5rem;
   color: #222;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
 }
 
-/* 🔍 Controls */
+/* ---------- Title ---------- */
+.shop-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  color: #145a32;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+}
+
+.shop-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #f39c12, #e67e22);
+  border-radius: 2px;
+}
+
+/* ---------- Controls Section ---------- */
 .shop-controls {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
-  margin-bottom: 2rem;
   flex-wrap: wrap;
+  margin-bottom: 2.5rem;
 }
 
 .search-input,
 .filter-select {
-  padding: 0.6rem 1rem;
-  border: 1px solid #ccc;
+  padding: 0.7rem 1rem;
   border-radius: 8px;
+  border: 2px solid #e0e0e0;
   font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #fff;
+  color: #333;
 }
 
-.search-input {
-  width: 200px;
+.search-input:focus,
+.filter-select:focus {
+  border-color: #145a32;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(20, 90, 50, 0.15);
 }
 
-.filter-select {
-  width: 180px;
+.search-input::placeholder {
+  color: #999;
 }
 
-/* 🧩 Product Grid */
+/* ---------- Product Grid ---------- */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.8rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+/* ---------- Product Card ---------- */
 .product-card {
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  padding: 1rem;
+  background: #fff;
+  border-radius: 1rem;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 1.2rem;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(20, 90, 50, 0.1);
 }
 
+/* ---------- Product Image ---------- */
 .product-image {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 0.8rem;
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+  transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
+.product-card:hover .product-image {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* ---------- Product Name ---------- */
+.product-card h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #145a32;
+  margin: 0.5rem 0;
+}
+
+/* ---------- Price ---------- */
 .price {
-  font-weight: bold;
-  color: #d97706;
-  margin: 0.5rem 0 1rem;
+  font-size: 1rem;
+  color: #f39c12;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
+/* ---------- View Button ---------- */
 .view-btn {
   display: inline-block;
-  background-color: #d97706;
-  color: white;
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+  color: #fff;
   text-decoration: none;
-  padding: 0.6rem 1rem;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  transition: background-color 0.3s ease;
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
 }
 
 .view-btn:hover {
-  background-color: #b45309;
+  background: linear-gradient(135deg, #145a32, #1c7c54);
+  transform: translateY(-2px);
 }
 
+/* ---------- No Results ---------- */
 .no-results {
-  text-align: center;
-  margin-top: 2rem;
+  grid-column: 1 / -1;
+  font-size: 1.1rem;
   color: #666;
+  background: #fdfaf5;
+  border-radius: 8px;
+  padding: 1.2rem;
+  border-left: 4px solid #f39c12;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
-/* 📱 Mobile Responsive */
+/* ---------- Responsive Design ---------- */
 @media (max-width: 768px) {
+  .shop-title {
+    font-size: 1.8rem;
+  }
+
+  .product-image {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
   .shop-controls {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
   }
 
-  .search-input,
-  .filter-select {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .product-grid {
-    grid-template-columns: 1fr;
+  .shop-title {
+    font-size: 1.6rem;
   }
 }

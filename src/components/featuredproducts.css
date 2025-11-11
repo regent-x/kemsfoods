@@ -52,7 +52,6 @@
   letter-spacing: 2px;
   margin-bottom: 50px;
   background: linear-gradient(90deg, #f39c12, #e67e22, #f39c12);
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 200% auto;
   animation: titleShine 4s linear infinite;

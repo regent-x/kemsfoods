@@ -1,132 +1,112 @@
-/* ============================================
-   ABOUT PREVIEW — KEMS AFRICAN FOODS THEME
-   Deep Green Elegance + Warm Orange Accents
-   ============================================ */
+/* ==========================================================
+   ABOUT PREVIEW — KEMS AFRICAN FOODS & MORE
+   White foundation | Orange + Green branding | Warm & clean
+   ========================================================== */
 
 .about-preview {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 3rem;
   flex-wrap: wrap;
-  gap: 60px;
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #0b3d2e 0%, #145a32 40%, #1c7c54 100%);
-  color: #fff;
-  overflow: hidden;
-  position: relative;
+  padding: 4rem 2rem;
+  background-color: #fff;
+  color: #222;
+  font-family: "Poppins", sans-serif;
 }
 
-/* Subtle animated glow overlay */
-.about-preview::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 80% 20%, rgba(243, 156, 18, 0.2), transparent 70%),
-              radial-gradient(circle at 20% 80%, rgba(230, 126, 34, 0.15), transparent 70%);
-  z-index: 0;
-  animation: softPulse 12s ease-in-out infinite alternate;
-}
-
-@keyframes softPulse {
-  0% { opacity: 0.8; transform: scale(1); }
-  100% { opacity: 1; transform: scale(1.03); }
-}
-
-/* ============================================
-   IMAGE SIDE
-   ============================================ */
+/* ---------- Image Side ---------- */
 .about-image {
-  flex: 1;
-  min-width: 300px;
-  max-width: 550px;
-  position: relative;
-  z-index: 1;
+  flex: 1 1 400px;
+  text-align: center;
 }
 
 .about-image img {
   width: 100%;
+  max-width: 500px;
   height: auto;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  border-radius: 1rem;
+  object-fit: cover;
+  box-shadow: 0 8px 25px rgba(20, 90, 50, 0.12);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .about-image img:hover {
   transform: scale(1.03);
-  box-shadow: 0 15px 35px rgba(243, 156, 18, 0.4);
+  box-shadow: 0 12px 30px rgba(20, 90, 50, 0.18);
 }
 
-/* ============================================
-   TEXT SIDE
-   ============================================ */
+/* ---------- Text Side ---------- */
 .about-text {
-  flex: 1;
-  min-width: 300px;
-  max-width: 600px;
-  z-index: 1;
+  flex: 1 1 400px;
+  max-width: 520px;
 }
 
 .about-text h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  font-weight: 800;
-  background: linear-gradient(90deg, #f39c12, #e67e22, #f39c12);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% auto;
-  animation: shimmer 6s linear infinite;
+  font-size: 2rem;
+  color: #145a32;
+  margin-bottom: 1rem;
+  position: relative;
 }
 
-@keyframes shimmer {
-  to { background-position: 200% center; }
+.about-text h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #f39c12, #e67e22);
+  border-radius: 2px;
 }
 
 .about-text p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.8;
-  color: #e8f5e9;
-  margin-bottom: 30px;
+  color: #444;
+  margin-bottom: 1.5rem;
 }
 
-/* ============================================
-   BUTTON
-   ============================================ */
+/* ---------- Button ---------- */
 .learn-btn {
   display: inline-block;
-  padding: 12px 28px;
-  border-radius: 30px;
-  text-decoration: none;
-  color: #fff;
-  font-weight: 600;
-  letter-spacing: 0.5px;
   background: linear-gradient(135deg, #f39c12, #e67e22);
-  box-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
-  transition: all 0.4s ease;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.75rem 1.8rem;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(243, 156, 18, 0.25);
 }
 
 .learn-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 18px rgba(243, 156, 18, 0.8);
+  background: linear-gradient(135deg, #145a32, #1c7c54);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(20, 90, 50, 0.25);
 }
 
-/* ============================================
-   RESPONSIVE DESIGN
-   ============================================ */
+/* ---------- Responsive Layout ---------- */
 @media (max-width: 900px) {
   .about-preview {
     flex-direction: column;
     text-align: center;
+    gap: 2rem;
   }
 
+  .about-text h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 480px) {
   .about-text h2 {
-    font-size: 2rem;
-  }
-
-  .about-text p {
-    font-size: 1rem;
+    font-size: 1.6rem;
   }
 
   .learn-btn {
-    padding: 10px 22px;
+    padding: 0.6rem 1.4rem;
+    font-size: 0.95rem;
   }
 }

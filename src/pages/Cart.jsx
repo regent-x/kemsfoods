@@ -1,7 +1,6 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
-import "./Cart.css";
+import "./cart.css";
 
 export default function Cart() {
   const { cartItems, removeFromCart, updateQuantity } = useCart();
@@ -35,15 +34,27 @@ export default function Cart() {
 
             <div className="cart-item-details">
               <h3>{item.name}</h3>
-              <p>${item.price.toFixed(2)}</p>
+              <p className="item-price">${item.price.toFixed(2)}</p>
 
               <div className="cart-controls">
-                <button onClick={() => updateQuantity(item.id, item.quantity - 1)} disabled={item.quantity <= 1}>−</button>
+                <button
+                  onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                  disabled={item.quantity <= 1}
+                >
+                  −
+                </button>
                 <span>{item.quantity}</span>
-                <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
+                <button
+                  onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                >
+                  +
+                </button>
               </div>
 
-              <button className="remove-btn" onClick={() => removeFromCart(item.id)}>
+              <button
+                className="remove-btn"
+                onClick={() => removeFromCart(item.id)}
+              >
                 Remove
               </button>
             </div>
@@ -52,7 +63,9 @@ export default function Cart() {
       </div>
 
       <div className="cart-summary">
-        <h3>Total: ${totalPrice.toFixed(2)}</h3>
+        <h3>
+          Total: <span>${totalPrice.toFixed(2)}</span>
+        </h3>
         <button className="btn-checkout" onClick={() => navigate("/checkout")}>
           Proceed to Checkout
         </button>

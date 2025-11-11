@@ -1,7 +1,7 @@
 // src/components/CategoryGrid.jsx
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./CategoryBanner.css";
+import "./categorybanner.css";
 
 export default function Category() {
   const navigate = useNavigate();

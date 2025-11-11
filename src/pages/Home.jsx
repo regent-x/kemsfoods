@@ -2,7 +2,7 @@ import HeroBanner from "../components/HeroBanner";
 import FeaturedProducts from "../components/FeaturedProducts";
 import AboutPreview from "../components/AboutPreview";
 import Category from "../components/CategoryBanner";
-import "./Home.css"
+import "./home.css"
 
 const Home = () => {
   return (

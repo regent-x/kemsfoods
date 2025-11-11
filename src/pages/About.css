@@ -1,129 +1,179 @@
+/* ==========================================================
+   KEMS AFRICAN FOODS & MORE — ABOUT PAGE STYLES
+   Theme: White base | Orange + Green accents | Warm modern design
+   ========================================================== */
+
 .about-container {
-  background-color: #faf9f6;
+  background-color: #fff;
   color: #222;
-  line-height: 1.6;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.7;
 }
 
-/* 🌅 Hero Section */
+/* 🌅 HERO SECTION */
 .about-hero {
-  background-image: url("https://images.unsplash.com/photo-1603052875030-5e031e4bdb9b?auto=format&fit=crop&w=1600&q=80");
-  background-size: cover;
-  background-position: center;
-  color: white;
+  background: linear-gradient(
+      rgba(20, 90, 50, 0.6),
+      rgba(20, 90, 50, 0.6)
+    ),
+    url("https://images.unsplash.com/photo-1604328698692-f76ea9498e76?w=1600")
+      center/cover no-repeat;
+  color: #fff;
   text-align: center;
-  padding: 6rem 1rem;
-  position: relative;
-}
-
-.about-hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  padding: 6rem 2rem;
 }
 
 .about-hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .about-hero h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #f39c12;
 }
 
 .about-hero p {
-  font-size: 1.2rem;
-  opacity: 0.9;
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
-/* 🧾 Story Section */
+/* 🧾 STORY SECTION */
 .about-story {
-  max-width: 800px;
-  margin: 3rem auto;
-  padding: 0 1rem;
+  padding: 4rem 2rem;
   text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .about-story h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
+  color: #145a32;
   margin-bottom: 1rem;
-  color: #d97706;
+  position: relative;
+}
+
+.about-story h2::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(90deg, #f39c12, #e67e22);
+  border-radius: 2px;
 }
 
 .about-story p {
-  margin-bottom: 1rem;
+  color: #444;
+  margin-top: 1.2rem;
+  font-size: 1rem;
 }
 
-/* 🌿 Values Section */
+/* 🌿 VALUES SECTION */
 .about-values {
-  background-color: white;
-  padding: 3rem 1rem;
+  background-color: #f9f9f9;
+  padding: 4rem 2rem;
+  text-align: center;
 }
 
 .about-values h2 {
-  text-align: center;
-  color: #d97706;
+  font-size: 2rem;
+  color: #145a32;
   margin-bottom: 2rem;
+  position: relative;
+}
+
+.about-values h2::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(90deg, #f39c12, #e67e22);
+  border-radius: 2px;
 }
 
 .values-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  max-width: 900px;
-  margin: 0 auto;
+  gap: 1.8rem;
+  margin-top: 2rem;
 }
 
 .value-card {
-  background-color: #faf9f6;
-  border-radius: 12px;
-  padding: 1.5rem;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  border-top: 4px solid #f39c12;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .value-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 22px rgba(20, 90, 50, 0.15);
+  border-top-color: #145a32;
 }
 
 .value-card h3 {
+  color: #145a32;
+  font-size: 1.1rem;
   margin-bottom: 0.8rem;
 }
 
-/* 🛒 CTA */
+.value-card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* 🛒 CALL TO ACTION */
 .about-cta {
   text-align: center;
-  padding: 3rem 1rem;
-  background-color: #fff7ed;
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+  color: #fff;
+}
+
+.about-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .shop-now-btn {
-  background-color: #d97706;
-  color: white;
-  padding: 0.8rem 1.4rem;
-  border-radius: 8px;
+  background: #145a32;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border-radius: 30px;
   text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(20, 90, 50, 0.25);
 }
 
 .shop-now-btn:hover {
-  background-color: #b45309;
+  background: #1c7c54;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(20, 90, 50, 0.35);
 }
 
-/* 📱 Responsive */
+/* 📱 RESPONSIVE DESIGN */
 @media (max-width: 768px) {
-  .about-hero {
-    padding: 4rem 1rem;
-  }
-
   .about-hero h1 {
     font-size: 2rem;
+  }
+
+  .about-story h2,
+  .about-values h2 {
+    font-size: 1.6rem;
   }
 
   .values-grid {
