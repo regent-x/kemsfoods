@@ -15,7 +15,7 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <main style={{ paddingTop: '70px'}}>
+      <main >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} /> 

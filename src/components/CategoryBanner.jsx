@@ -18,7 +18,7 @@ export default function Category() {
     {
       name: "Grains & Flours",
       // Why local path? For images stored in your project
-      image: "../assets/veggies.webp",
+    image: ".\\src\\assets\\grains.jpg",
       // Why icon? Adds visual identification (using emoji for simplicity)
       icon: "🌾",
       // Why count? Shows how many products in category
@@ -28,7 +28,7 @@ export default function Category() {
     },
     {
       name: "Spices & Seasonings",
-      image: "../assets/photo-14.webp",
+      image: "https://images.pexels.com/photos/1251174/pexels-photo-1251174.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       icon: "🌶️",
       count: 67,
       badge: null // No badge for this category
@@ -50,7 +50,7 @@ export default function Category() {
     },
     {
       name: "Fresh Vegetables",
-      image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=800",
+      image: "..\\src\\assets\\veggies.webp",
       icon: "🥬",
       count: 56,
       badge: "Hot"
@@ -139,7 +139,7 @@ export default function Category() {
           SECTION HEADER
           Why semantic HTML? h2 tells screen readers this is a heading
           ============================================ */}
-      <h2 data-text="Shop by Category">Shop by Category</h2>
+      <h2 >Shop by Category</h2>
       <p>Discover authentic African groceries and ingredients</p>
 
       {/* ============================================

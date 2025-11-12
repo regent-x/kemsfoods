@@ -5,7 +5,7 @@
 
 .hero {
   position: relative;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,7 +21,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: url("https://cdn.pixabay.com/photo/2017/02/23/20/59/spices-2099274_1280.jpg")
+  background: url(".\smiling-woman-modern-kitchen (1).jpg")
     center/cover no-repeat;
   z-index: 0;
   filter: brightness(0.65) contrast(1.1);
