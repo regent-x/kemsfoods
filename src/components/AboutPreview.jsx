@@ -7,7 +7,7 @@ const AboutPreview = () => {
     <section className="about-preview">
       <div className="about-image">
         <img
-          src="https://cdn.pixabay.com/photo/2016/03/05/22/45/spices-1236680_1280.jpg"
+          src="../src/assets/food-mix.jpg"
           alt="African spices and ingredients"
         />
       </div>

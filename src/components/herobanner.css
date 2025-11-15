@@ -21,7 +21,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: url(".\smiling-woman-modern-kitchen (1).jpg")
+  background: url("../src/assets/smiling-woman-modern-kitchen (1).jpg")
     center/cover no-repeat;
   z-index: 0;
   filter: brightness(0.65) contrast(1.1);

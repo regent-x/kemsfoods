@@ -12,7 +12,7 @@
     #145a32 40%,
     #1c7c54 100%
   );
-  color: #fff;
+  color: black;
   overflow: hidden;
   text-align: center;
 }
@@ -52,10 +52,8 @@
   letter-spacing: 2px;
   margin-bottom: 50px;
   background: linear-gradient(90deg, #f39c12, #e67e22, #f39c12);
-  -webkit-text-fill-color: transparent;
   background-size: 200% auto;
   animation: titleShine 4s linear infinite;
-  color: black;
 }
 
 @keyframes titleShine {

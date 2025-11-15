@@ -1,5 +1,5 @@
 // products.js - simulated API using localStorage
-import { PRODUCTS as seed } from "../data";
+import { PRODUCTS as seed } from "../data/products.json";
 
 const KEY = "kems_products_v1";
 
