@@ -18,7 +18,7 @@ export default function Category() {
     {
       name: "Grains & Flours",
       // Why local path? For images stored in your project
-    image: "../src/assets/grains.jpg",
+    image: "/src/assets/grains.jpg",
       // Why count? Shows how many products in category
       count: 45,
       // Why badge? Highlights special categories
@@ -26,38 +26,38 @@ export default function Category() {
     {
       name: "Tuber",
       // Why local path? For images stored in your project
-    image: "../src/assets/yams.webp",
+    image: "/src/assets/yams.webp",
       // Why count? Shows how many products in category
       // Why badge? Highlights special categories
     },
     {
       name: "Spices & Seasonings",
-      image: "../src/assets/openair-spices.jpg",
+      image: "/src/assets/openair-spices.jpg",
     },
     {
       name: "Beverages",
       // Why Unsplash URL? Free high-quality images for prototyping
-      image: "../src/assets/PEAK-MILK-.jpg",
+      image: "/src/assets/PEAK-MILK-.jpg",
     },
     {
       name: "Proteins and Meats",
-      image: "../src/assets/smoked-fish.jpg",
+      image: "/src/assets/smoked-fish.jpg",
     },
     {
       name: "Vegetables & Produce",
-      image: "../src/assets/veggies.webp",
+      image: "/src/assets/veggies.webp",
     },
     {
       name: "Stew & Soup",
-      image: "../src/assets/Neogric-Melon-Seeds-2.jpg",
+      image: "/src/assets/Neogric-Melon-Seeds-2.jpg",
     },
     {
       name: "Snacks & Sweets",
-      image: "../src/assets/plantain-chips-pack.jpg",
+      image: "/src/assets/plantain-chips-pack.jpg",
     },
     {
       name: "Condiments & Oils",
-      image: "../src/assets/Red-oil.webp",
+      image: "/src/assets/Red-oil.webp",
     }
   ];
 
