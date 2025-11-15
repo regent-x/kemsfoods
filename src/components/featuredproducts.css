@@ -55,6 +55,7 @@
   -webkit-text-fill-color: transparent;
   background-size: 200% auto;
   animation: titleShine 4s linear infinite;
+  color: black;
 }
 
 @keyframes titleShine {

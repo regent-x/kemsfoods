@@ -2,6 +2,8 @@ import React from "react";
 import "./productcard.css";
 
 const ProductCard = ({ product }) => {
+
+
   return (
     <div className="product-card">
       {/* “NEW” or “SALE” badge */}

@@ -18,63 +18,46 @@ export default function Category() {
     {
       name: "Grains & Flours",
       // Why local path? For images stored in your project
-    image: ".\\src\\assets\\grains.jpg",
-      // Why icon? Adds visual identification (using emoji for simplicity)
-      icon: "🌾",
+    image: "../src/assets/grains.jpg",
       // Why count? Shows how many products in category
       count: 45,
       // Why badge? Highlights special categories
-      badge: "Popular"
+    },
+    {
+      name: "Tuber",
+      // Why local path? For images stored in your project
+    image: "../src/assets/yams.webp",
+      // Why count? Shows how many products in category
+      // Why badge? Highlights special categories
     },
     {
       name: "Spices & Seasonings",
-      image: "https://images.pexels.com/photos/1251174/pexels-photo-1251174.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      icon: "🌶️",
-      count: 67,
-      badge: null // No badge for this category
+      image: "../src/assets/openair-spices.jpg",
     },
     {
-      name: "Snacks & Drinks",
+      name: "Beverages",
       // Why Unsplash URL? Free high-quality images for prototyping
-      image: "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=800",
-      icon: "🍿",
-      count: 89,
-      badge: "New"
+      image: "../src/assets/PEAK-MILK-.jpg",
     },
     {
-      name: "Frozen Foods",
-      image: "https://images.unsplash.com/photo-1589984662646-512a89b94bd6?w=800",
-      icon: "🧊",
-      count: 34,
-      badge: null
+      name: "Proteins and Meats",
+      image: "../src/assets/smoked-fish.jpg",
     },
     {
-      name: "Fresh Vegetables",
-      image: "..\\src\\assets\\veggies.webp",
-      icon: "🥬",
-      count: 56,
-      badge: "Hot"
+      name: "Vegetables & Produce",
+      image: "../src/assets/veggies.webp",
     },
     {
-      name: "Meat & Seafood",
-      image: "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=800",
-      icon: "🍖",
-      count: 42,
-      badge: null
+      name: "Stew & Soup",
+      image: "../src/assets/Neogric-Melon-Seeds-2.jpg",
     },
     {
-      name: "Dairy & Eggs",
-      image: "https://images.unsplash.com/photo-1628088062854-d1870b4553da?w=800",
-      icon: "🥛",
-      count: 38,
-      badge: null
+      name: "Snacks & Sweets",
+      image: "../src/assets/plantain-chips-pack.jpg",
     },
     {
-      name: "Bakery & Bread",
-      image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800",
-      icon: "🍞",
-      count: 52,
-      badge: "Popular"
+      name: "Condiments & Oils",
+      image: "../src/assets/Red-oil.webp",
     }
   ];
 
